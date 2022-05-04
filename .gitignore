@@ -1,3 +1,7 @@
-.idea
+# Rust and the program
+target/
 *.ppm
-target
+
+# Nix and direnv
+result/
+.direnv/
