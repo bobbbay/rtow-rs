@@ -1,10 +1,5 @@
-#![feature(generic_associated_types)]
-
+use super::Vec;
 use std::ops;
-
-pub struct Vec<const SIZE: usize> {
-    e: [i32; SIZE],
-}
 
 pub type Vec3 = Vec<3>;
 pub type Point = Vec3;
@@ -138,13 +133,4 @@ impl ops::Div<i32> for Vec3 {
         let z = self.z() / rhs;
         Self::new(x, y, z)
     }
-}
-
-// Color utility functions
-
-pub fn write_color(x: i16, y: i16, z: i16) {
-    let x = 255 * x;
-    let y = 255 * y;
-    let z = 255 * z;
-    print!("{} {} {}\n", x, y, z);
 }

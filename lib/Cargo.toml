@@ -1,0 +1,4 @@
+[package]
+name = "rtow-lib"
+version = "0.0.1"
+authors = [ "NotYourLaptop <bob@NotYourLaptop>" ]
