@@ -8,6 +8,8 @@ use tracing::info;
 use std::fs::File;
 use std::io::{BufWriter, Write};
 
+use lib::util::write_color;
+
 static H: u16 = 256;
 static W: u16 = 256;
 
@@ -34,7 +36,7 @@ async fn main() -> Result<()> {
 
                 let b = (0.25 * 255.) as u16;
 
-                write!(buffer, "{} {} {}\n", y, x, b).unwrap();
+                write_color(&mut buffer, y, x, b).unwrap();
             }
             y_bar.reset();
         }
